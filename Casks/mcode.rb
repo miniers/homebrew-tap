@@ -1,9 +1,9 @@
 cask "mcode" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.2.35"
-  sha256 arm:   "7fdd8710ade7a9bd5a54e3a622cd971546ed64d544f79e031209c2f7d3f326a3",
-         intel: "99be5fb0f0255afc1819db17b7f6e4be8758872406cf93df8dbfc93d0f7f5141"
+  version "0.2.36"
+  sha256 arm:   "cd9934a7abee03d085f38be30a9c06cdfd36b8fa239543244da2eeedc569b262",
+         intel: "835681ceadbdb21c9003f85a4e1742cb488b749b095e2cce194dbc8ba1664cfc"
 
   url "https://github.com/miniers/MCode/releases/download/v#{version}/mcode-#{version}-#{arch}.dmg"
   name "MCode"
@@ -15,7 +15,7 @@ cask "mcode" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "MCode.app"
 end
